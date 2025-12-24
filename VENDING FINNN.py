@@ -40,10 +40,10 @@ def payment(price):
 def vending_machine():
     print("\nWelcome to Beauty Glam Vending Machine gorgeous!!")
     
-    # Ask user if they want to buy
-    choice = input("Would you like to buy something?: ")
     
-    # Check the input
+    choice = input("Would you like to buy something?(Yes/No): ")
+    
+    
     if choice != "yes" and choice != "Yes" and choice != "YES":
         print("Thank you! Have a nice day gorgeous!!")
         return
@@ -58,7 +58,7 @@ def vending_machine():
 
         payment(item["price"])
 
-        # Reduce stock after successful purchase
+       
         item["stock"] = item["stock"] - 1
 
         print(f"{item['name']} has been dispensed")
@@ -120,3 +120,4 @@ products = {
 
 
 vending_machine()
+
